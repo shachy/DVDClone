@@ -1,0 +1,10 @@
+C:\Users\Shachar Rotem\source\repos\DVDClone\DVDClone\bin\Release\DVDClone.exe.config
+C:\Users\Shachar Rotem\source\repos\DVDClone\DVDClone\bin\Release\DVDClone.exe
+C:\Users\Shachar Rotem\source\repos\DVDClone\DVDClone\bin\Release\DVDClone.pdb
+C:\Users\Shachar Rotem\source\repos\DVDClone\DVDClone\obj\Release\DVDClone.csproj.AssemblyReference.cache
+C:\Users\Shachar Rotem\source\repos\DVDClone\DVDClone\obj\Release\DVDClone.form1.resources
+C:\Users\Shachar Rotem\source\repos\DVDClone\DVDClone\obj\Release\DVDClone.Properties.Resources.resources
+C:\Users\Shachar Rotem\source\repos\DVDClone\DVDClone\obj\Release\DVDClone.csproj.GenerateResource.cache
+C:\Users\Shachar Rotem\source\repos\DVDClone\DVDClone\obj\Release\DVDClone.csproj.CoreCompileInputs.cache
+C:\Users\Shachar Rotem\source\repos\DVDClone\DVDClone\obj\Release\DVDClone.exe
+C:\Users\Shachar Rotem\source\repos\DVDClone\DVDClone\obj\Release\DVDClone.pdb

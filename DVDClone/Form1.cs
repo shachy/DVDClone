@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DVDClone
 {
-    public partial class Form1 : Form
+    public partial class form1 : Form
     {
-        public Form1()
+        public form1()
         {
             InitializeComponent();
         }
@@ -33,45 +33,44 @@ namespace DVDClone
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Point pLocation = panel1.Location;
+            int[] pLocation = new int[] { panel1.Location.X, panel1.Location.Y };
 
             // Every 10ms the panel is moving by VHSpeed[X, Y]/20 
-            if(pDirection[0] == 6 && pDirection[1] == 2)
+            if (pDirection[0] == 6 && pDirection[1] == 2)
             {
-                panel1.Location = new Point(pLocation.X + (VHSpeed[0] / 20), pLocation.Y + (VHSpeed[1] / 20));
+                panel1.Location = new Point(pLocation[0] + (VHSpeed[0] / 20), pLocation[1] + (VHSpeed[1] / 20));
                 panel1.BackColor = Color.Gold;
             }
             else if(pDirection[0] == 6 && pDirection[1] == 8)
             {
-                panel1.Location = new Point(pLocation.X + (VHSpeed[0] / 20), pLocation.Y - (VHSpeed[1] / 20));
+                panel1.Location = new Point(pLocation[0] + (VHSpeed[0] / 20), pLocation[1] - (VHSpeed[1] / 20));
                 panel1.BackColor = Color.CadetBlue;
             }
             else if (pDirection[0] == 4 && pDirection[1] == 2)
             {
-                panel1.Location = new Point(pLocation.X - (VHSpeed[0] / 20), pLocation.Y + (VHSpeed[1] / 20));
+                panel1.Location = new Point(pLocation[0] - (VHSpeed[0] / 20), pLocation[1] + (VHSpeed[1] / 20));
                 panel1.BackColor = Color.FloralWhite;
             }
             else if (pDirection[0] == 4 && pDirection[1] == 8)
             {
-                panel1.Location = new Point(pLocation.X - (VHSpeed[0] / 20), pLocation.Y - (VHSpeed[1] / 20));
+                panel1.Location = new Point(pLocation[0] - (VHSpeed[0] / 20), pLocation[1] - (VHSpeed[1] / 20));
                 panel1.BackColor = Color.DeepPink;
             }
 
             // pDirection[X, Y] 2 DOWN, 8 UP, 4 LEFT, 6 RIGHT
-            int[] PNCLocation = new int[] { pLocation.X, pLocation.Y };
-            if (PNCLocation[1] <= 0)
+            if (pLocation[1] <= 0)
             {
                 pDirection[1] = 2;
             }
-            else if(PNCLocation[1] + 145 >= 720)
+            else if(pLocation[1] + 145 >= this.Height)
             {
                 pDirection[1] = 8;
             }
-            else if(PNCLocation[0] + 220 >= 1270)
+            else if(pLocation[0] + 215 >= this.Width)
             {
                 pDirection[0] = 4;
             }
-            else if(PNCLocation[0] <= 0)
+            else if(pLocation[0] <= 0)
             {
                 pDirection[0] = 6;
             }
